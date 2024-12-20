@@ -8,9 +8,7 @@
 rm -rf ./feeds/luci/applications/luci-app-passwall
 
 # 添加插件
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+
 
 # 后台IP设置
 export Ipv4_ipaddr="10.10.10.2"            # 修改openwrt后台地址(填0为关闭)
@@ -63,7 +61,7 @@ export Disable_NaiveProxy="1"                # 因个别源码的分支不支持
 export Automatic_Mount_Settings="0"          # 编译时加入开启NTFS格式盘挂载的所需依赖(1为启用命令,填0为不作修改)
 
 # 去除网络共享(autosamba)
-export Disable_autosamba="0"                 # 去掉源码默认自选的luci-app-samba或luci-app-samba4(1为启用命令,填0为不作修改)
+export Disable_autosamba="1"                 # 去掉源码默认自选的luci-app-samba或luci-app-samba4(1为启用命令,填0为不作修改)
 
 # 其他
 export Ttyd_account_free_login="0"           # 设置ttyd免密登录(1为启用命令,填0为不作修改)
